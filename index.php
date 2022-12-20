@@ -1,4 +1,31 @@
+<?php 
+require "dbBroker.php";
+require "model/user.php";
 
+session_start();
+
+if(isset($_POST['username']) && isset($_POST['password'])) {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  
+  setcookie("kolacic",$username,time()+3600);
+  $currentUser = new User(1,$username,$password);
+
+  $rs = User::login($currentUser,$conn);
+
+  if($rs->num_rows==1) {
+
+    $_SESSION['userId'] = $currentUser->id;
+    header('Location:home.php');
+    exit("Uspesno ste se ulogovali");
+
+  } else {
+    
+    exit("Neuspesno logovanje");
+  }
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
