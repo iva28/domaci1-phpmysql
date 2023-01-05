@@ -86,7 +86,7 @@ tr:hover {background-color: rgb(237,237,237);}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="hero-btn purple-btn" data-bs-dismiss="modal">Zatvori</button>
-                    <button type="button" class="hero-btn purple-btn1" >Zakazi</button>
+                    <button type="button" class="hero-btn purple-btn1" onclick="zakaziTermin()">Zakazi</button>
                 </div>
             </div>
         </div>

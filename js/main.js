@@ -36,3 +36,26 @@ function displayData() {
         }
     })
 }
+
+//insert.php
+function zakaziTermin() {
+    var datumAdd = $('#completeDatum').val();
+    var tretmanAdd = $('#completeTretman').val();
+    var radnikAdd = $('#completeRadnik').val();
+
+    $.ajax({
+        url: "db/insert.php",
+        type: 'post',
+        data: {
+            datumSend: datumAdd,
+            tretmanSend: tretmanAdd,
+            radnikSend: radnikAdd
+
+        },
+        success: function(data, status) {
+        
+            $('#completeModal').modal('hide');
+            displayData();
+        }
+    })
+}
