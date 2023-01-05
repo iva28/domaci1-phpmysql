@@ -36,6 +36,61 @@ tr:hover {background-color: rgb(237,237,237);}
             </p><br>
         </div></section>
 
+        <div class="modal fade" id="completeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Zakaži termin</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+            
+                    <div class="mb-4">
+                        <label for="completeDatum" class="form-label">Datum</label>
+                        <input type="text" class="form-control" id="completeDatum" required placeholder="Unesite datum">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="completeTretman" class="form-label">Tretman</label>
+                        <select id="completeTretman">
+                        <?php 
+                        include "dbBroker.php";
+                        include "model/tretman.php";
+                        $tretmani = Tretman::getAllTretman($conn);
+                        while ($tretman = mysqli_fetch_assoc($tretmani)) {
+                            ?>
+                                <option> <?php echo $tretman['naziv']; ?></option>
+                            <?php
+                            }
+                        ?>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="completeRadnik" class="form-label">Zaposleni</label>
+                        <select id="completeRadnik">
+                        <?php 
+                        include "dbBroker.php";
+                        include "model/radnik.php";
+                        $zaposleni = Radnik::getAllRadnik($conn);
+                        while ($zaposlen = mysqli_fetch_assoc($zaposleni)) {
+                            ?>
+                                <option> <?php echo $zaposlen['ime']; ?></option>
+                            <?php
+                            }        
+                        ?>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="hero-btn purple-btn" data-bs-dismiss="modal">Zatvori</button>
+                    <button type="button" class="hero-btn purple-btn1" >Zakazi</button>
+                </div>
+            </div>
+        </div>
+    </div>
    
     <!-- Bootstrap JavaScript -->
 
