@@ -1,4 +1,4 @@
-//tabela se prikazuje
+
 $(document).ready(function() {
     displayData();
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
     })
 })
 
-//select.php
+
 function displayData() {
     var displayData = "true";
     $.ajax({
@@ -37,7 +37,7 @@ function displayData() {
     })
 }
 
-//insert.php
+
 function zakaziTermin() {
     var datumAdd = $('#completeDatum').val();
     var tretmanAdd = $('#completeTretman').val();
