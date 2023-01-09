@@ -2,11 +2,11 @@
 $(document).ready(function() {
     displayData();
 
-    $("#live-search").keyup(function() {
+    $("#").keyup(function() {
         var input = $(this).val();
         if (input != "") {
             $.ajax({
-                url: "live-search.php",
+                url: "",
                 method: "POST",
                 data: {
                     input: input
@@ -59,3 +59,18 @@ function zakaziTermin() {
         }
     })
 }
+
+
+function obrisiTermin(deleteid) {
+    $.ajax({
+        url: "db/delete.php",
+        type: 'post',
+        data: {
+            deletesend: deleteid
+        },
+        success: function(data, status) {
+            displayData();
+        }
+    })
+}
+

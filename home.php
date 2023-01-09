@@ -101,10 +101,12 @@ tr:hover {background-color: rgb(237,237,237);}
         <button type="button" class="hero-btn purple-btn my-4" data-bs-toggle="modal" data-bs-target="#completeModal">
             Dodaj termin
         </button>
+       
         <div id="displayDataTable"></div>
-        <input type="text" class="form-control" id="live-search">
+        <input type="text" class="form-control" id="search"  placeholder = "Pretrazi termin">
 
     </div>
+  
 
 
   
@@ -121,5 +123,6 @@ tr:hover {background-color: rgb(237,237,237);}
     </script>
 
     <script type="text/javascript" src="js/main.js"></script>
+    
 </body>
 </html>

@@ -41,3 +41,5 @@ if (isset($_POST['displaySend'])) {
 
 
 ?>
+
+<script type="text/javascript" src="js/sort.js"></script>
