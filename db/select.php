@@ -1,8 +1,6 @@
 <?php
-
 require "../dbBroker.php";
 require "../model/termin.php";
-
 
 if (isset($_POST['displaySend'])) {
     $tabela = '<table id="myTable" class="table">

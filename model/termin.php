@@ -42,7 +42,7 @@ class Termin{
 
     
     public  function updateTerminById( mysqli $conn) {
-        $query="UPDATE termin SET vreme = $this->vreme, tretman = '$this->tretmanId', radnik='$this->radnikId' WHERE id = $this->id";
+        $query="UPDATE termin SET vreme = '$this->vreme', tretman = '$this->tretmanId', radnik='$this->radnikId' WHERE id = $this->id";
         return $conn->query($query);
     }
 
