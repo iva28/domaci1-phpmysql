@@ -43,9 +43,7 @@ tr:hover {background-color: rgb(237,237,237);}
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Zakaži termin</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-
-            
+                <div class="modal-body">  
                     <div class="mb-4">
                         <label for="completeDatum" class="form-label">Datum</label>
                         <input type="text" class="form-control" id="completeDatum" required placeholder="Unesite datum">
