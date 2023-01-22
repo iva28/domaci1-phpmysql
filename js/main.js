@@ -2,23 +2,23 @@
 $(document).ready(function() {
     displayData();
 
-    $("#").keyup(function() {
-        var input = $(this).val();
-        if (input != "") {
-            $.ajax({
-                url: "",
-                method: "POST",
-                data: {
-                    input: input
-                },
-                success: function(data) {
-                    $("#displayDataTable").html(data);
-                }
-            })
-        } else {
-            displayData();
-        }
-    })
+   // $("#").keyup(function() {
+     //   var input = $(this).val();
+       // if (input != "") {
+         //   $.ajax({
+           //     url: "",
+             //   method: "POST",
+               // data: {
+                 //   input: input
+                //},
+               // success: function(data) {
+                 //   $("#displayDataTable").html(data);
+               // }
+            //})
+        //} else {
+          //  displayData();
+       // }
+  //  })
 })
 
 
